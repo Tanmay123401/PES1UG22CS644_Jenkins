@@ -8,11 +8,13 @@ pipeline {
                 echo 'Build Stage Successful'
             }
         }
-        stage('Test') {
-            steps {
-                sh './PES1UG22CS644-1'
-                echo 'Test Stage Successful'
-            }
+       stage('Test') {
+    steps {
+        sh './non_existent_file'
+        echo 'Test Stage Successful'
+    }
+}
+
         }
         stage('Deploy') {
             steps {
